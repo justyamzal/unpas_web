@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid | Grid Item Properties | Align-Self </title>
+
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        /*! start */
+        .container {
+            width: 80%;
+            margin: 50px auto;
+            display: grid;
+            grid-template-columns: minmax(200px, 300px) 1fr 1fr;
+            grid-template-rows: repeat(3, 100px);
+
+        }
+
+        .item {
+            background-color: salmon;
+            display: flex;
+            align-items: center;
+        }
+
+        .my-item {
+            background-color: lightblue;
+            align-self: start;
+            /* align-self: end; */
+            /* align-self: center; */
+            /* align-self: stretch; */
+        }
+
+        /*! end */
+        .container2 {
+            width: 80%;
+            margin: 50px auto;
+            display: grid;
+            grid-template-columns: minmax(200px, 300px) 1fr 1fr;
+            grid-template-rows: repeat(3, 100px);
+
+        }
+
+        .item2 {
+            background-color: salmon;
+            display: flex;
+            align-items: center;
+        }
+
+        .my-item2 {
+            background-color: lightblue;
+            /* align-self: start; */
+            align-self: end;
+            /* align-self: center; */
+            /* align-self: stretch; */
+        }
+
+        /*! center */
+        .container3 {
+            width: 80%;
+            margin: 50px auto;
+            display: grid;
+            grid-template-columns: minmax(200px, 300px) 1fr 1fr;
+            grid-template-rows: repeat(3, 100px);
+
+        }
+
+        .item3 {
+            background-color: salmon;
+            display: flex;
+            align-items: center;
+        }
+
+        .my-item3 {
+            background-color: lightblue;
+            /* align-self: start; */
+            /* align-self: end; */
+            align-self: center;
+            /* align-self: stretch; */
+        }
+
+        /*! stretch */
+        .container4 {
+            width: 80%;
+            margin: 50px auto;
+            display: grid;
+            grid-template-columns: minmax(200px, 300px) 1fr 1fr;
+            grid-template-rows: repeat(3, 100px);
+
+        }
+
+        .item4 {
+            background-color: salmon;
+            display: flex;
+            align-items: center;
+        }
+
+        .my-item4 {
+            background-color: lightblue;
+            /* align-self: start; */
+            /* align-self: end; */
+            /* align-self: center; */
+            align-self: stretch;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- start -->
+    <h1>align-self: start</h1>
+    <div class="container">
+        <div class="item my-item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+        <div class="item">8</div>
+        <div class="item">9</div>
+    </div>
+
+    <!-- end -->
+    <h1> align-self: end</h1>
+    <div class="container2">
+        <div class="item2 my-item2">1</div>
+        <div class="item2">2</div>
+        <div class="item2">3</div>
+        <div class="item2">4</div>
+        <div class="item2">5</div>
+        <div class="item2">6</div>
+        <div class="item2">7</div>
+        <div class="item2">8</div>
+        <div class="item2">9</div>
+    </div>
+
+    <!-- center -->
+    <h1>align-self: center</h1>
+    <div class="container3">
+        <div class="item3 my-item3">1</div>
+        <div class="item3">2</div>
+        <div class="item3">3</div>
+        <div class="item3">4</div>
+        <div class="item3">5</div>
+        <div class="item3">6</div>
+        <div class="item">7</div>
+        <div class="item3">8</div>
+        <div class="item3">9</div>
+    </div>
+
+    <!-- stretch -->
+    <h1>align-self: stretch</h1>
+    <div class="container4">
+        <div class="item4 my-item4">1</div>
+        <div class="item4">2</div>
+        <div class="item4">3</div>
+        <div class="item4">4</div>
+        <div class="item4">5</div>
+        <div class="item4">6</div>
+        <div class="item4">7</div>
+        <div class="item4">8</div>
+        <div class="item4">9</div>
+    </div>
+</body>
+
+</html>

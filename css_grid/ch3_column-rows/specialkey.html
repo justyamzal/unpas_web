@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid Properties | Special Keyword & Function</title>
+    <style>
+        /*--- Repeat ---*/
+        .container {
+            width: 60%;
+            height: 50px auto;
+            display: grid;
+            /* ! menggunakan Repeat */
+            grid-template-columns: repeat(4, 1fr) repeat(5, 1.5fr);         
+        }
+        /* for odd numbers (ganjil) */
+        .item {
+            background-color: rgb(138, 209, 254);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+        /* for even numbers (genap) */
+        .item:nth-child(even) {
+            background-color: rgb(255, 142, 142);
+        }
+
+        /*--- Min - Content ---*/
+        .container2 {
+            width: 60%;
+            height: 50px auto;
+            display: grid;
+            /* ! menggunakan Repeat */
+            grid-template-columns: 1fr min-content 1fr;         
+        }
+        /* for odd numbers (ganjil) */
+        .item2 {
+            background-color: rgb(138, 209, 254);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+        /* for even numbers (genap) */
+        .item2:nth-child(even) {
+            background-color: rgb(255, 142, 142);
+        }
+
+        /*--- Max - Content ---*/
+        .container3 {
+            width: 60%;
+            height: 50px auto;
+            display: grid;
+            /* ! menggunakan Repeat */
+            grid-template-columns: 1fr max-content 1fr;         
+        }
+        /* for odd numbers (ganjil) */
+        .item3 {
+            background-color: rgb(138, 209, 254);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+        /* for even numbers (genap) */
+        .item3:nth-child(even) {
+            background-color: rgb(255, 142, 142);
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+    <h1>Repeat</h1>
+    <div class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+        <div class="item">8</div>
+        <div class="item">9</div>
+    </div>
+    <hr>
+
+    <h1>Min-content & max-content</h1>
+
+    <h2>min-content</h2>
+    <div class="container2">
+        <div class="item2">1</div>
+        <div class="item2">2</div>
+        <div class="item2">3</div>
+        <div class="item2">4</div>
+        <div class="item2">Lorem Ipsum DolorAmet</div>
+        <div class="item2">6</div>
+        <div class="item2">7</div>
+        <div class="item2">8</div>
+        <div class="item2">9</div>
+    </div>
+    <!-- ! min-content memecah text menjadi beberapa bagian kata lalu nantinya mencari kata terpanjangan untuk diajadikan sebagian ujung batas panjang grid/cell tersebut -->
+    
+    <h2>max-content</h2>
+    <div class="container3">
+        <div class="item3">1</div>
+        <div class="item3">2</div>
+        <div class="item3">3</div>
+        <div class="item3">4</div>
+        <div class="item3">Lorem Ipsum DolorAmet</div>
+        <div class="item3">6</div>
+        <div class="item3">7</div>
+        <div class="item3">8</div>
+        <div class="item3">9</div>
+    </div>
+    <!-- ! max-content sebaliknya,tidak memecah text atau elemen namun menentukan panjang cell/grid berdasarkan akhir dari panjangnya text hingga akhir tsb  -->
+    <hr>
+
+    <h1>Auto-fill & auto-fit</h1>
+
+
+</body>
+</html>

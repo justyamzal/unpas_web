@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid | Grid Alignment | Align Content</title>
+    <!-- sama seperti justify-content tapi untuk sumbu vertikal 
+        
+    .container {
+            align-content: start | end | center | stretch | space-around | space-between | space-evently ;
+        }
+    
+    -->
+
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* start */
+        .container {
+            width: 80%;
+            height: 700px;
+            margin: 50px auto;
+            display: grid;
+            grid-template-rows: 80px 80px;
+            grid-template-columns: 180px 180px 180px;
+            gap: 5px;
+            background-color: rgb(219, 209, 209);
+
+            /* align-content: start; */
+            /* align-content: end; */
+            /* align-content: center; */
+            /* align-content: stretch; */
+            /* align-content: space-around; */
+            /* align-content: space-between; */
+            /* align-content: space-evenly; */
+
+        }
+
+        .items {
+            width: 100px;
+            height: 50px;
+            border: 3px solid black;
+            background-color: lightblue;
+            justify-content: end;
+        }
+
+         /* End  */
+        .container2 {
+            width: 80%;
+            height: 700px;
+            margin: 50px auto;
+            display: grid;
+            grid-template-rows: 80px 80px;
+            grid-template-columns: 120px 120px 120px;
+            gap: 5px;
+            background-color: rgb(219, 209, 209);
+
+            /* align-content: start; */
+            align-content: end;
+            /* align-content: center; */
+            /* align-content: stretch; */
+            /* align-content: space-around; */
+            /* align-content: space-between; */
+            /* align-content: space-evenly; */
+
+        }
+        .items2 {
+            width: 100px;
+            height: 50px;
+            border: 3px solid black;
+            background-color: lightblue;
+            justify-content: end;
+        }
+
+        /* Center  */
+        .container3 {
+            width: 80%;
+            height: 700px;
+            margin: 50px auto;
+            display: grid;
+            grid-template-rows: 80px 80px;
+            grid-template-columns: 120px 120px 120px;
+            gap: 5px;
+            background-color: rgb(219, 209, 209);
+
+            /* align-content: start; */
+            /* align-content: end; */
+            align-content: center;
+            /* align-content: stretch; */
+            /* align-content: space-around; */
+            /* align-content: space-between; */
+            /* align-content: space-evenly; */
+
+        }
+
+        .items3 {
+            width: 100px;
+            height: 50px;
+            border: 3px solid black;
+            background-color: lightblue;
+            justify-content: end;
+        }
+
+
+        /* Stretch */
+        .container4 {
+            width: 80%;
+            height: 700px;
+            margin: 50px auto;
+            display: grid;
+            grid-template-rows: 80px 80px;
+            grid-template-columns: 180px 180px 180px;
+            gap: 5px;
+            background-color: rgb(219, 209, 209);
+
+            /* align-content: start; */
+            /* align-content: end; */
+            /* align-content: center; */
+            align-content: stretch;
+            /* align-content: space-around; */
+            /* align-content: space-between; */
+            /* align-content: space-evenly; */
+
+        }
+
+        .items4 {
+            width: 100px;
+            height: 50px;
+            border: 3px solid black;
+            background-color: lightblue;
+            justify-content: end;
+        }
+
+
+        /* Space-around  */
+        .container5 {
+            width: 80%;
+            height: 700px;
+            margin: 50px auto;
+            display: grid;
+            grid-template-rows: 80px 80px;
+            grid-template-columns: 180px 180px 180px;
+            gap: 5px;
+            background-color: rgb(219, 209, 209);
+
+            /* align-content: start; */
+            /* align-content: end; */
+            /* align-content: center; */
+            /* align-content: stretch; */
+            align-content: space-around;
+            /* align-content: space-between; */
+            /* align-content: space-evenly; */
+
+        }
+
+        .items5 {
+            width: 100px;
+            height: 50px;
+            border: 3px solid black;
+            background-color: lightblue;
+            justify-content: end;
+        }
+
+        /* Space-between  */
+        .container6 {
+            width: 80%;
+            height: 700px;
+            margin: 50px auto;
+            display: grid;
+            grid-template-rows: 80px 80px;
+            grid-template-columns: 180px 180px 180px;
+            gap: 5px;
+            background-color: rgb(219, 209, 209);
+
+            /* align-content: start; */
+            /* align-content: end; */
+            /* align-content: center; */
+            /* align-content: stretch; */
+            /* align-content: space-around; */
+            align-content: space-between;
+            /* align-content: space-evenly; */
+        }
+        .items6 {
+            width: 100px;
+            height: 50px;
+            border: 3px solid black;
+            background-color: lightblue;
+            justify-content: end;
+        }
+
+
+        /* Space-evently */
+        .container7 {
+            width: 80%;
+            height: 700px;
+            margin: 50px auto;
+            display: grid;
+            grid-template-rows: 80px 80px;
+            grid-template-columns: 120px 120px 120px;
+            gap: 5px;
+            background-color: rgb(219, 209, 209);
+
+            /* align-content: start; */
+            /* align-content: end; */
+            /* align-content: center; */
+            /* align-content: stretch; */
+            /* align-content: space-around; */
+            /* align-content: space-between; */
+            align-content: space-evenly;
+        }
+        .items7 {
+            width: 100px;
+            height: 50px;
+            border: 3px solid black;
+            background-color: lightblue;
+            justify-content: end;
+        }
+
+
+        h1 {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <!--  -->
+
+    <h1>Align Content: Start</h1>
+    <div class="container">
+        <div class="items">1</div>
+        <div class="items">2</div>
+        <div class="items">3</div>
+        <div class="items">4</div>
+        <div class="items">5</div>
+        <div class="items">6</div>
+        <div class="items">7</div>
+        <div class="items">8</div>
+        <div class="items">9</div>
+    </div>
+
+    <h1>align-content: End</h1>
+    <div class="container2">
+        <div class="items2">1</div>
+        <div class="items2">2</div>
+        <div class="items2">3</div>
+        <div class="items2">4</div>
+        <div class="items2">5</div>
+        <div class="items2">6</div>
+        <div class="items2">7</div>
+        <div class="items2">8</div>
+        <div class="items2">9</div>
+    </div>
+    <h1>align-content: Center</h1>
+    <div class="container3">
+        <div class="items3">1</div>
+        <div class="items3">2</div>
+        <div class="items3">3</div>
+        <div class="items3">4</div>
+        <div class="items3">5</div>
+        <div class="items3">6</div>
+        <div class="items3">7</div>
+        <div class="items3">8</div>
+        <div class="items3">9</div>
+    </div>
+    <!-- stretch is not working bcs the element having the size  -->
+    <h1>align-content: Stretch</h1>
+    <div class="container4">
+        <div class="items4">1</div>
+        <div class="items4">2</div>
+        <div class="items4">3</div>
+        <div class="items4">4</div>
+        <div class="items4">5</div>
+        <div class="items4">6</div>
+        <div class="items4">7</div>
+        <div class="items4">8</div>
+        <div class="items4">9</div>
+    </div>
+    <h1>align-content: Space-around</h1>
+    <div class="container5">
+        <div class="items5">1</div>
+        <div class="items5">2</div>
+        <div class="items5">3</div>
+        <div class="items5">4</div>
+        <div class="items5">5</div>
+        <div class="items5">6</div>
+        <div class="items5">7</div>
+        <div class="items5">8</div>
+        <div class="items5">9</div>
+    </div>
+    <h1>align-content: Space-between</h1>
+    <div class="container6">
+        <div class="items6">1</div>
+        <div class="items6">2</div>
+        <div class="items6">3</div>
+        <div class="items6">4</div>
+        <div class="items6">5</div>
+        <div class="items6">6</div>
+        <div class="items6">7</div>
+        <div class="items6">8</div>
+        <div class="items6">9</div>
+    </div>
+    <h1>align-content: Space-evenly</h1>
+    <div class="container7">
+        <div class="items7">1</div>
+        <div class="items6">2</div>
+        <div class="items7">3</div>
+        <div class="items7">4</div>
+        <div class="items6">5</div>
+        <div class="items7">6</div>
+        <div class="items7">7</div>
+        <div class="items7">8</div>
+        <div class="items7">9</div>
+    </div>
+
+</body>
+
+</html>

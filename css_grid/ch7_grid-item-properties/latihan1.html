@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid | Grid Item Properties | Grid Column & Row - Start & End </title>
+    <!-- Menentukan tempat dari grid item dengan mengacu pada nomor atau nama grid line yang spesifik 
+        .item {
+            grid-column-start: <nomor> | <nama> | span <nomor> | span <nama> | auto;
+            grid-column-end: <nomor> | <nama> | span <nomor> | span <nama> | auto;
+            grid-row-start: <nomor> | <nama> | span <nomor> | span <nama> | auto;
+            grid-row-end: <nomor> | <nama> | span <nomor> | span <nama> | auto;
+
+        }
+    -->
+
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #ddd;
+
+        }
+
+        .container {
+            width: 80%;
+            margin: 50px auto;
+            display: grid;
+            background-color: grey;
+            
+            /* grid-template-columns: minmax(200px, 300px) 1fr 1fr;
+            grid-template-rows: repeat(3, 100px); */
+
+            grid-template-columns: [satu] minmax(200px, 300px) [dua] 1fr [tiga] 1fr [empat];
+            grid-template-rows: [baris1] 100px [baris2] 100px [baris3] 100px [baris4];
+        }
+
+        .items {
+            display: flex;
+            justify-content: end;
+            align-items: center;
+        }
+
+        .my-items {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 4;
+
+        /* grid-column-start: 2;
+        grid-column-end: 4;
+        grid-row-start: 2;
+        grid-row-end: 4; */
+
+            /* grid-column-start: 1;
+        grid-column-end: span 3;
+        grid-row-start: 1;
+        grid-row-end: span 2; */
+
+        /* grid-column-start: satu;
+        grid-column-end: empat;
+        grid-row-start: baris1;
+        grid-row-end: b4; */
+
+        /* grid-column-start: -1; */
+        /* grid-column-end: -2; */
+        /* grid-row-start: -4; */
+        /* grid-row-end: -1; */
+
+        background-color: lightblue;
+        }
+
+        .container2 {
+            width: 80%;
+            margin: 50px auto;
+            display: grid;
+            background-color: grey;
+            
+            /* grid-template-columns: minmax(200px, 300px) 1fr 1fr;
+            grid-template-rows: repeat(3, 100px); */
+
+            grid-template-columns: [satu] minmax(200px, 300px) [dua] 1fr [tiga] 1fr [empat];
+            grid-template-rows: [baris1] 100px [baris2] 100px [baris3] 100px [baris4];
+        }
+        .items2 {
+            display: flex;
+            justify-content: end;
+            align-items: center;
+        }
+        .my-items2 {
+            grid-column-start: -1;
+            grid-column-end: -2;
+            grid-row-start: -4;
+            grid-row-end: -1;
+
+            background-color: lightblue;
+        }
+
+        /* span */
+        .container3 {
+            width: 80%;
+            margin: 50px auto;
+            display: grid;
+            background-color: grey;
+            
+            /* grid-template-columns: minmax(200px, 300px) 1fr 1fr;
+            grid-template-rows: repeat(3, 100px); */
+
+            grid-template-columns: [satu] minmax(200px, 300px) [dua] 1fr [tiga] 1fr [empat];
+            grid-template-rows: [baris1] 100px [baris2] 100px [baris3] 100px [baris4];
+        }
+        .items3 {
+            display: flex;
+            justify-content: end;
+            align-items: center;
+        }
+        .my-items3 {
+            grid-column-start: 1;
+            grid-column-end: span 2;
+            grid-row-start: 1;
+            grid-row-end: span 2;
+
+            background-color: lightblue;
+        }
+
+        /* with name */
+        .container4 {
+            width: 80%;
+            margin: 50px auto;
+            display: grid;
+            background-color: grey;
+            
+            /* grid-template-columns: minmax(200px, 300px) 1fr 1fr;
+            grid-template-rows: repeat(3, 100px); */
+
+            grid-template-columns: [satu] minmax(200px, 300px) [dua] 1fr [tiga] 1fr [empat];
+            grid-template-rows: [baris1] 100px [baris2] 100px [baris3] 100px [baris4];
+        }
+        .items4 {
+            display: flex;
+            justify-content: end;
+            align-items: center;
+        }
+        .my-items4 {
+            grid-column-start: satu;
+            grid-column-end: empat;
+            grid-row-start: baris1;
+            grid-row-end: baris4;
+
+            background-color: lightblue;
+            /* ! mengapa hasilnya ada yg terdorong? karena ada baris yg explicit */
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="items my-items">1</div>
+        <div class="items">2</div>
+        <div class="items">3</div>
+        <div class="items">4</div>
+        <div class="items">5</div>
+        <div class="items">6</div>
+        <!-- <div class="items">7</div> -->
+        <!-- <div class="items">8</div> -->
+        <!-- <div class="items">9</div> -->
+    </div>
+
+    <div class="container2">
+        <div class="items2 my-items2">1</div>
+        <div class="items2">2</div>
+        <div class="items2">3</div>
+        <div class="items2">4</div>
+        <div class="items2">5</div>
+        <div class="items2">6</div>
+        <!-- <div class="items">7</div> -->
+        <!-- <div class="items">8</div> -->
+        <!-- <div class="items">9</div> -->
+    </div>
+
+
+    <!-- span -->
+    <div class="container3">
+        <div class="items3 my-items3">1</div>
+        <div class="items3">2</div>
+        <div class="items3">3</div>
+        <div class="items3">4</div>
+        <div class="items3">5</div>
+        <div class="items3">6</div>
+        <!-- <div class="items">7</div> -->
+        <!-- <div class="items">8</div> -->
+        <!-- <div class="items">9</div> -->
+    </div>
+
+
+    <!-- name -->
+    <div class="container4">
+        <div class="items4 my-items4">1</div>
+        <div class="items4">2</div>
+        <div class="items4">3</div>
+        <div class="items4">4</div>
+        <div class="items4">5</div>
+        <div class="items4">6</div>
+        <!-- <div class="items">7</div> -->
+        <!-- <div class="items">8</div> -->
+        <!-- <div class="items">9</div> -->
+    </div>
+
+
+
+
+
+
+</body>
+
+</html>

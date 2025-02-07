@@ -1,0 +1,336 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    width: 100%;
+}
+
+body {
+    background-color: #ddd;
+    font-size: 18px;
+    font-family: 'Oswald', Arial, Helvetica, sans-serif;
+    margin: 50px;
+}
+
+/*--- Container ---*/
+.container {
+    display: grid;
+    gap: 10px;
+}
+
+/*--- Header ---*/
+.header {
+    display: grid;
+    /* ! grid template (6 column) */
+    grid-template-areas:
+        'hero hero feature-1'
+        'hero hero feature-2';
+}
+
+.hero {
+    grid-area: hero;
+    /*! when image touch <300px, image become smaller and full size */
+    min-height: 300px;
+    background-image: url(img/hero.jpg);
+    background-size: cover;
+    background-position: center;
+    /*! make font not really stich to corner or make gap to corner */
+    padding: 40px;
+}
+
+/* hero image */
+.hero>* {
+    /* make property in hero invisible for the first time then pop out */
+    display: none;
+}
+
+.features {
+    background-color: #000;
+    color: white;
+    display: grid;
+    /* justify-content: center; */
+    /* align-content: center;  */
+
+    /* ! shorcut */
+    place-content: center;
+    text-align: center;
+    cursor: pointer;
+}
+
+.feature-1 {
+    grid-area: feature-1;
+    background-image: url(img/batman.jpg);
+    background-size: cover;
+}
+
+.feature-2 {
+    grid-area: feature-2;
+    background-image: url(img/gundam.jpg);
+    background-size: cover;
+    background-position-y: -190px;
+    /* background-position-x: px; */
+    /* background-repeat: no-repeat; */
+
+    /* color: black; */
+    /* filter: brightness(89%); */
+
+}
+
+.features .price {
+    font-size: 3em;
+    font-weight: 200;
+}
+
+/* NAVIGATION */
+.menu {
+    /*! make menu navigation move to top of header element */
+    order: -1;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+
+    /*! for checking */
+    /* background-color: orange; */
+
+}
+
+/* Nerdy store logo brand */
+.menu .brand {
+    font-size: 1.3em;
+    color: #333;
+}
+
+/* Menu list */
+.menu ul {
+    list-style: none;
+    display: grid;
+    /* ! auto-fit to adapt/making menu for dynamic bcs it's make easier if there are some extra menu adds in the future */
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 5px;
+
+}
+
+/* Menu anchor */
+.menu .a {
+    /* making link display to block it's actually make easier for you click it bcs makes link transform like a button and more bigger */
+    display: block;
+    background-color: #000;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    padding: 5px;
+    /*! making the text become capital */
+    text-transform: uppercase;
+    font-size: 0.9em;
+}
+
+/* <!-- Hamburger Menu 
+(pure with CSS) --> */
+.menu-toggle {
+    /* when in normal display, menu just normal/none flex but when change to mobile phone display it becomes display flex  */
+    display: none;
+    flex-direction: column;
+    height: 20px;
+    /* background-color: black; */
+    justify-content: space-between;
+    position: relative;
+    /* make the menu toggle always in front (u can use value 2,.... until 999) */
+    z-index: 2;
+}
+
+.menu-toggle input {
+    position: absolute;
+    width: 40px;
+    height: 28px;
+    left: -5px;
+    top: -3px;
+    opacity: 0;
+    /* ! change the type of cursor */
+    cursor: pointer;
+    /* ! to make input check box moves to front of attribute from the back of span element(hamburger element), bcs after got when check box button got click it's doesnt
+    able to click again and it moves to back of span element/hamburger elemen */
+    z-index: 2;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background: #000;
+    border-radius: 3px;
+    /* !animation transition */
+    transition: all 0.5s;
+}
+
+/* Hamburger Menu (Animation) */
+/*! targeting span num.1 , counting from input element bcs it's also child of div menu-toggle */
+
+/* !! memindahkan tumpuan/poros garis span memutar yg awalnya dari tengah menuju ujung kiri garis span (sumbu x= 0, sumbu y= 0)  */
+.menu-toggle span:nth-child(2) {
+    transform-origin: 0 0;
+}
+
+/* poros diubah, kebalikan dari putaran garis diaatas, (sumbu x = 0, y = 100 deg)  */
+.menu-toggle span:nth-child(4) {
+    transform-origin: 0 100%;
+}
+
+/* action when got clicked and degree rotation */
+.menu-toggle input:checked~span:nth-child(2) {
+    background-color: white;
+    transform: rotate(45deg) translate(-1px, -1px);
+}
+
+.menu-toggle input:checked~span:nth-child(4) {
+    background-color: white;
+    transform: rotate(-45deg) translate(-1px, 0);
+}
+
+/* garis tengah span diperkecil sehingga terlihat hilang */
+.menu-toggle input:checked~span:nth-child(3) {
+    transform: scale(0);
+}
+
+/*--- Services ---*/
+.services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.service {
+    background-color: white;
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #aaa;
+    border-radius: 3px;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+}
+
+.service .icon {
+    font-size: 3em;
+}
+
+.service h3 {
+    font-size: 1.5em;
+}
+
+/* service font */
+.service p {
+    font-weight: 200;
+    letter-spacing: 1px;
+    font-size: 0.8em;
+}
+
+/* Gallery */
+
+.gallery {
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 10px;
+}
+
+.gallery h2 {
+    /* grid-column-start: 1;
+    grid-column-end: -1; */
+    grid-column: 1 /-1;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+
+
+
+/*--- Responsive Breakpoint ---*/
+
+/* Under the size of desktop screen */
+@media (max-width: 1024px) {
+
+    /* make the navigation menu back to normal */
+    .menu {
+        order: inherit;
+        grid-template-columns: 1fr;
+
+    }
+
+    /* make the logo brand gone/missing */
+    .menu .brand {
+        display: none;
+    }
+
+    .hero > * {
+        display: block;
+        background-color: black;
+        color: white;
+        padding: 5px;
+        margin-bottom: 5px;
+    }
+
+    .hero {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: center;
+    }
+
+}
+
+/* Tablet screen */
+@media (max-width: 768px) {
+    .menu {
+        order: -1;
+        justify-items: end;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .menu ul {
+        /* display doesnt work if the selector using 'nav' why? bcs it's about the specificity (bobot), so you need to change it to selector ".menu" from "nav" */
+        display: flex;
+        position: absolute;
+        right: 0;
+        /* ! stitch to right side*/
+        top: 0;
+        width: 100%;
+        height: 100vh;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column;
+        /* background-color: black; */
+        z-index: 1;
+        /* to set the side menu toggle to bottom side of navbar*/
+        background-color: #000;
+        /* ! we gonna make the hamburger menu that sliding from horizontal to vertical using (Y, -100%) 
+        (if using 100%, the hamburger menu will pop out from down to up )  */
+        transform: translateY(-100%);
+        transition: all 1s;
+        opacity: 0;
+    }
+
+    .menu ul.slide {
+        opacity: 1;
+        /* sliding from up to down */
+        transform: translateY(0);
+    }
+}
+
+/* Mobile/Phone screen */
+@media (max-width: 600px) {
+
+    body {
+        margin: 15px;
+    }
+
+    .header {
+        grid-template-areas:
+            'hero'
+            'feature-1'
+            'feature-2'
+        ;
+    }
+}

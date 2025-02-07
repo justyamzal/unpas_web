@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid Properties | Columns & Rows</title>
+    <style>
+        .container {
+            width: 60%;
+            height: 50px auto;
+            display: grid;
+            grid-template-columns: 25% auto 50px;
+            grid-template-rows: 50px 100px auto;
+            /* auto = implicit */
+        }
+        /* for odd numbers (ganjil) */
+        .item {
+            background-color: rgb(138, 209, 254);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        /* for even numbers (genap) */
+        .item:nth-child(even) {
+            background-color: rgb(255, 142, 142);
+        }
+    </style>
+</head>
+<body>
+    <h1>Grid-template-columns and Grid-template-rows</h1>
+    
+        <!-- .container>.item*9>{$} -->
+        <div class="container">
+            <div class="item">1</div>
+            <!-- implisit -->
+            <div class="item">2</div>
+            <div class="item">3</div>
+            <div class="item">4</div>
+            <div class="item">5</div>
+            <div class="item">6</div>
+            <div class="item">7</div>
+            <div class="item">8</div>
+            <div class="item">9</div>
+        </div>
+        <p> Column -> cell no 1,4,7 = 25% ; cell no 2,5,8 = auto (implicit) ; cell no 3,6,9 = 50px</p>
+        <p>Rows -> cell no 1,4,7 = 50px ; cell no 2,5,8 = 100px ; cell no 3,6,9 = auto  </p>
+</body>
+</html>

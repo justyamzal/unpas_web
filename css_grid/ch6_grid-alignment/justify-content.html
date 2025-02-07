@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid | Grid Alignment | Justify Content</title>
+    <!-- mengatur posisi seluruh grid container pada sumbu horizontal. ini bisa dilakukan ketika ukuran total grid lebih kecil dari ukuran container
+        biasanya ketika grid itemsnya menggunakan ukuran fixed(px) 
+    -->
+    <!--  
+        .container {
+            justify-content: start | end | center | stretch | space-around | space-between | space-evently ;
+        }
+    -->
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        /* Start */
+        .container {
+            background-color: rgb(219, 209, 209);
+            width: 80%;
+            margin: 50px auto;
+            display: grid;
+            grid-template-columns: 120px 180px 120px;
+            grid-template-rows: 80px 80px;
+            gap: 5px;
+
+            justify-content: start;
+            /* justify-content: end; */
+            /* justify-content: center; */
+            /* justify-content: stretch; */
+            /* justify-content: space-around; */
+            /* justify-content: space-between; */
+            /* justify-content: space-evenly; */
+        }
+
+        .items {
+            border: 3px solid black;
+            width: 100px;
+            height: 50px;
+            background-color: lightblue;
+            justify-content: end;
+            
+
+        }
+
+        /* End */
+        .container2 {
+            background-color: rgb(219, 209, 209);
+            width: 80%;
+            margin: 50px auto;
+            display: grid;
+            grid-template-columns: 120px 180px 120px;
+            grid-template-rows: 80px 80px;
+            gap: 5px;
+            
+            justify-content: end;
+        }
+
+        .items2 {
+            border: 3px solid black;
+            width: 100px;
+            height: 50px;
+            background-color: lightblue;
+            justify-content: end;
+        }
+
+        /* Center */
+        .container3 {
+            background-color: rgb(219, 209, 209);
+            width: 80%;
+            margin: 50px auto;
+            display: grid;
+            grid-template-columns: 120px 180px 120px;
+            grid-template-rows: 80px 80px;
+            gap: 5px;
+
+            justify-content: center;
+
+        }
+
+        .items3 {
+            border: 3px solid black;
+            width: 100px;
+            height: 50px;
+            background-color: lightblue;
+            justify-content: end;
+        }
+
+        /* Stretch */
+        /*! stretch tidak akan bekerja karena elemen memiliki panjang dan lebar  */
+        .container4 {
+            background-color: rgb(219, 209, 209);
+            width: 80%;
+            margin: 50px auto;
+            display: grid;
+            grid-template-columns: 120px 180px 120px;
+            grid-template-rows: 80px 80px;
+            gap: 5px;
+
+            justify-content: stretch;
+        }
+
+        .items4 {
+            border: 3px solid black;
+            width: 100px;
+            height: 50px;
+            background-color: lightblue;
+            justify-content: end;
+        }
+
+
+        /* Space-around */
+        .container5 {
+            background-color: rgb(219, 209, 209);
+            width: 80%;
+            margin: 50px auto;
+            display: grid;
+            grid-template-columns: 120px 180px 120px;
+            grid-template-rows: 80px 80px;
+            gap: 5px;
+
+            justify-content: space-around;
+
+        }
+
+        .items5 {
+            border: 3px solid black;
+            width: 100px;
+            height: 50px;
+            background-color: lightblue;
+            justify-content: end;
+        }
+
+
+        /* Space-between */
+        .container6 {
+            background-color: rgb(219, 209, 209);
+            width: 80%;
+            margin: 50px auto;
+            display: grid;
+            grid-template-columns: 120px 180px 120px;
+            grid-template-rows: 80px 80px;
+            gap: 5px;
+
+            justify-content: space-between;
+
+        }
+
+        .items6 {
+            border: 3px solid black;
+            width: 100px;
+            height: 50px;
+            background-color: lightblue;
+            justify-content: end;
+        }
+
+
+        /* Space-evenly */
+        .container7 {
+            background-color: rgb(219, 209, 209);
+            width: 80%;
+            margin: 50px auto;
+            display: grid;
+            grid-template-columns: 120px 180px 120px;
+            grid-template-rows: 80px 80px;
+            gap: 5px;
+
+            justify-content: space-evenly;
+
+        }
+
+        .items7 {
+            border: 3px solid black;
+            width: 100px;
+            height: 50px;
+            background-color: lightblue;
+            justify-content: end;
+        }
+
+
+    </style>
+</head>
+<body>
+    <!-- justify content: start -->
+    <h1>justify content: start</h1>
+    <div class="container">
+        <div class="items">1</div>
+        <div class="items">2</div>
+        <div class="items">3</div>
+        <div class="items">4</div>
+        <div class="items">5</div>
+        <div class="items">6</div>
+        <div class="items">7</div>
+        <div class="items">8</div>
+        <div class="items">9</div>
+    </div>
+
+    <!-- justify content: end  -->
+    <h1> justify content: end</h1>
+    <div class="container2">
+        <div class="items2">1</div>
+        <div class="items2">2</div>
+        <div class="items2">3</div>
+        <div class="items2">4</div>
+        <div class="items2">5</div>
+        <div class="items2">6</div>
+        <div class="items2">7</div>
+        <div class="items2">8</div>
+        <div class="items2">9</div>
+    </div>
+
+    <!-- justify-content: center -->
+     <h1>justify-content: center</h1>
+    <div class="container3">
+        <div class="items3">1</div>
+        <div class="items3">2</div>
+        <div class="items3">3</div>
+        <div class="items3">4</div>
+        <div class="items3">5</div>
+        <div class="items3">6</div>
+        <div class="items3">7</div>
+        <div class="items3">8</div>
+        <div class="items3">9</div>
+    </div>
+
+     <!-- justify-content: stretch -->
+    <h1>justify-content: stretch</h1>
+    <div class="container4">
+        <div class="items4">1</div>
+        <div class="items4">2</div>
+        <div class="items4">3</div>
+        <div class="items4">4</div>
+        <div class="items4">5</div>
+        <div class="items4">6</div>
+        <div class="items4">7</div>
+        <div class="items4">8</div>
+        <div class="items4">9</div>
+    </div>
+
+    <!-- justify-content: space-around -->
+    <h1>justify-content: space-around</h1>
+    <div class="container5">
+        <div class="items5">1</div>
+        <div class="items5">2</div>
+        <div class="items5">3</div>
+        <div class="items5">4</div>
+        <div class="items5">5</div>
+        <div class="items5">6</div>
+        <div class="items5">7</div>
+        <div class="items5">8</div>
+        <div class="items5">9</div>
+    </div>
+
+    <!-- justify-content: space-between -->
+    <h1>justify-content: space-between</h1>
+    <div class="container6">
+        <div class="items6">1</div>
+        <div class="items6">2</div>
+        <div class="items6">3</div>
+        <div class="items6">4</div>
+        <div class="items6">5</div>
+        <div class="items6">6</div>
+        <div class="items6">7</div>
+        <div class="items6">8</div>
+        <div class="items6">9</div>
+    </div>
+
+    <!-- justify-content: space-evenly -->
+    <h1>justify-content: space-evenly</h1>
+    <div class="container7">
+        <div class="items7">1</div>
+        <div class="items7">2</div>
+        <div class="items7">3</div>
+        <div class="items7">4</div>
+        <div class="items7">5</div>
+        <div class="items7">6</div>
+        <div class="items7">7</div>
+        <div class="items7">8</div>
+        <div class="items7">9</div>
+    </div>
+</body>
+</html>

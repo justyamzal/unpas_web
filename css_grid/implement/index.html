@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nerdy Store</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <header class="header">
+            <div class="hero">
+                <h2 class="heading">Nerdy Store</h2>
+                <p class="sub-heading">Selling Nerdy's Stuff</p>
+            </div>
+            <div class="features feature-1">
+                <h4 class="price">IDR 250K</h4>
+                <p class="item">Superhero Figure</p>
+            </div>
+            <div class="features feature-2">
+                <h4 class="price">IDR 270K</h4>
+                <p>Robot Figure</p>
+            </div>
+        </header>
+
+        <!-- NAVIGATION -->
+        <nav class="menu">
+            <div class="menu-toggle">
+                <input type="checkbox" />
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <!-- Logo -->
+            <div class="brand">
+                <h1>Nerdy Store</h1>
+            </div>
+            <ul class="menu-list">
+                <li class="a">Home</li>
+                <li class="a">Products</li>
+                <li class="a">About</li>
+                <li class="a">Gallery</li>
+            </ul>
+        </nav>
+
+        <section class="services">
+            <div class="service">
+                <div class="icon">👨‍💻</div>
+                <h3>Hardware Aesthetic</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis laborum, ducimus architecto
+                    possimus culpa incidunt?
+                    Consequuntur aliquam alias non quisquam?
+                </p>
+            </div>
+            <div class="service">
+                <div class="icon">🤖</div>
+                <h3>Action Figure</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis laborum, ducimus architecto
+                    possimus
+                    Consequuntur aliquam alias non quisquam?
+                </p>
+            </div>
+            <div class="service">
+                <div class="icon">⛩️</div>
+                <h3>Anime Merchandise</h3>
+                <p>Veritatis laborum, ducimus architecto possimus culpa incidunt?
+                    Consequuntur aliquam alias non quisquam?
+                </p>
+            </div>
+            <div class="service">
+                <div class="icon">📘</div>
+                <h3>Comic</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis laborum, ducimus architecto
+                    possimus culpa incidunt?
+                </p>
+            </div>
+        </section>
+
+        <section class="gallery">
+            <h2>Gallery</h2>
+            <!-- generates random pictures from unsplash  
+            img[src="https://source.unsplash.com/random/20$x20$"]*10 
+            -->
+            <img src="img/1.paul-esch-laurent-qrdwJfAAVEI-unsplash.jpg" alt="">
+            <img src="img/2.kenny-eliason-bE3_aFt85Y8-unsplash.jpg" alt="">
+            <img src="img/3.hiros-lee-363QFBAKuxM-unsplash.jpg" alt="">
+            <img src="img/4.jeet-dhanoa-sR1BaDlRSKM-unsplash.jpg" alt="">
+            <img src="img/5.gracia-dharma-qTlbO6mkQH0-unsplash.jpg" alt="">
+            <img src="img/6.31MHxcKI4gL.jpg" alt="">
+            <img src="img/7.516DoqyFLfL._SX385_.jpg" alt="">
+            <img src="img/8.dev-d2Py_uhXJQo-unsplash.jpg" alt="">
+            <img src="img/9.dex-ezekiel-IxDPZ-AHfoI-unsplash.jpg" alt="">
+            <img src="img/10.erik-mclean-fDAv7lWawtk-unsplash.jpg" alt="">
+        </section>
+    </div>
+
+    <script>
+        const menuToggle = document.querySelector('.menu-toggle input');
+        const nav = document.querySelector('nav ul');
+
+        menuToggle.addEventListener('click', function () {
+            nav.classList.toggle('slide');
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid | Grid Item Properties | Justify-Self </title>
+    <!-- Mengatur posisi item pada  sebuah cell terhadapt sumbu horizontal -->
+    <style>
+        html,body{
+            margin: 0;
+            padding: 0;
+            background-color: #ddd;
+            
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+
+        /*--- justify-content : start ---*/
+        .container {
+            width: 80%;
+            margin: 50px auto;
+            display: grid;
+            grid-template-columns: minmax(200px, 300px) 1fr 1fr;
+            grid-template-rows: repeat(3,100px);
+
+             /* grid-template-columns: [satu] minmax(200px, 300px) [dua] 1fr [tiga] 1fr [empat];
+        grid-template-rows: [baris1] 100px [baris2] 100px [b-3] 100px [b4]; */
+        }
+        .item {
+            background-color: salmon;
+            display: flex;
+            align-items: center;
+            
+        }
+        .my-item {
+            justify-content: start; 
+            /* justify-content: end; */
+            /* justify-content: center; */
+            /* justify-content: stretch; */
+            background-color: lightblue;
+        }
+
+        /*--- justify-content : end ---*/
+        .container2 {
+            width: 80%;
+            margin: 50px auto;
+            display: grid;
+            grid-template-columns: minmax(200px, 300px) 1fr 1fr;
+            grid-template-rows: repeat(3,100px);
+
+             /* grid-template-columns: [satu] minmax(200px, 300px) [dua] 1fr [tiga] 1fr [empat];
+        grid-template-rows: [baris1] 100px [baris2] 100px [b-3] 100px [b4]; */
+        }
+        .item2 {
+            background-color: salmon;
+            display: flex;
+            align-items: center;
+            
+        }
+        .my-item2 {
+            /* justify-content: start;  */
+            justify-content: end;
+            /* justify-content: center; */
+            /* justify-content: stretch; */
+            background-color: lightblue;
+        }
+
+        
+        
+        /*--- justify-content : center ---*/
+        .container3 {
+            width: 80%;
+            margin: 50px auto;
+            display: grid;
+            grid-template-columns: minmax(200px, 300px) 1fr 1fr;
+            grid-template-rows: repeat(3,100px);
+
+             /* grid-template-columns: [satu] minmax(200px, 300px) [dua] 1fr [tiga] 1fr [empat];
+        grid-template-rows: [baris1] 100px [baris2] 100px [b-3] 100px [b4]; */
+        }
+        .item3 {
+            background-color: salmon;
+            display: flex;
+            align-items: center;
+            
+        }
+        .my-item3 {
+            /* justify-content: start;  */
+            /* justify-content: end; */
+            justify-content: center;
+            /* justify-content: stretch; */
+            background-color: lightblue;
+        }
+
+        
+        
+        
+        /*--- justify-content : stretch ---*/
+        .container4 {
+            width: 80%;
+            margin: 50px auto;
+            display: grid;
+            grid-template-columns: minmax(200px, 300px) 1fr 1fr;
+            grid-template-rows: repeat(3,100px);
+
+             /* grid-template-columns: [satu] minmax(200px, 300px) [dua] 1fr [tiga] 1fr [empat];
+        grid-template-rows: [baris1] 100px [baris2] 100px [b-3] 100px [b4]; */
+        }
+        .item4 {
+            background-color: salmon;
+            display: flex;
+            align-items: center;
+            
+        }
+        .my-item4 {
+            /* justify-content: start;  */
+            /* justify-content: end; */
+            /* justify-content: center; */
+            justify-content: stretch;
+            background-color: lightblue;
+        }
+
+
+    </style>
+</head>
+<body>
+        <h1>justify-content:start</h1>
+       <div class="container">
+        <div class="item my-item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+        <div class="item">8</div>
+        <div class="item">9</div>
+       </div>
+
+       <h1>justify-content:end</h1>
+       <div class="container2">
+        <div class="item2 my-item2">1</div>
+        <div class="item2">2</div>
+        <div class="item2">3</div>
+        <div class="item2">4</div>
+        <div class="item2">5</div>
+        <div class="item2">6</div>
+        <div class="item2">7</div>
+        <div class="item2">8</div>
+        <div class="item2">9</div>
+       </div> 
+
+       <h1>justify-content:center</h1>
+       <div class="container3">
+        <div class="item my-item3">1</div>
+        <div class="item3">2</div>
+        <div class="item3">3</div>
+        <div class="item3">4</div>
+        <div class="item3">5</div>
+        <div class="item3">6</div>
+        <div class="item3">7</div>
+        <div class="item3">8</div>
+        <div class="item3">9</div>
+       </div> 
+
+       <h1>justify-content:stretch</h1>
+       <div class="container4">
+        <div class="item4 my-item4">1</div>
+        <div class="item4">2</div>
+        <div class="item">3</div>
+        <div class="item4">4</div>
+        <div class="item4">5</div>
+        <div class="item4">6</div>
+        <div class="item4">7</div>
+        <div class="item4">8</div>
+        <div class="item4">9</div>
+       </div> 
+
+</body>
+</html>

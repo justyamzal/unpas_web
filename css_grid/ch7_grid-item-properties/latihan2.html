@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid | Grid Item Properties | Grid-column & Grid-row</title>
+    <!-- Shorthand untuk start dan end pada grid column & grid row 
+    
+    .items{
+        grid-column: <start-line> / <end-line> | <start-line> / span<value>
+        grid-row: <start-line> /<end-line> | <start-line> / span <value>
+    }
+    -->
+
+    <style>
+        html,body {
+            margin:0;
+            padding:0;
+
+        }
+        .container {
+            width: 80%;
+            margin: 50px auto;
+            display: grid;
+
+            background-color: grey;
+            
+            grid-template-columns: minmax(200px, 300px) 1fr 1fr;
+            grid-template-rows: repeat(3, 100px);
+        }
+        .items {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .my-items {
+
+        /* grid-column-start: 2;
+        grid-column-end: 4;
+        grid-row-start: 2;
+        grid-row-end: 4; */
+        
+        /* ! shortcut */
+        grid-column: 2 / 4;
+        grid-row: 2 / 4 ;
+
+        background-color: lightblue;
+        }
+
+        /* --- Container 2 --- */
+        .container2 {
+            width: 80%;
+            margin: 50px auto;
+            display: grid;
+
+            background-color: grey;
+            
+            grid-template-columns: minmax(200px, 300px) 1fr 1fr;
+            grid-template-rows: repeat(3, 100px);
+        }
+        .items2 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .my-items2 {
+
+        /* grid-column-start: 2;
+        grid-column-end: 4;
+        grid-row-start: 2;
+        grid-row-end: 4; */
+        
+        /* ! shortcut */
+        grid-column: 1 / span 2;
+        grid-row: 1 / span 2 ;
+
+        background-color: lightblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="items my-items">1</div>
+        <div class="items">2</div>
+        <div class="items">3</div>
+        <div class="items">4</div>
+        <div class="items">5</div>
+        <div class="items">6</div>
+        <!-- <div class="items">7</div> -->
+        <!-- <div class="items">8</div> -->
+        <!-- <div class="items">9</div> -->
+    </div>
+
+    <div class="container2">
+        <div class="items2 my-items2">1</div>
+        <div class="items2">2</div>
+        <div class="items2">3</div>
+        <div class="items2">4</div>
+        <div class="items2">5</div>
+        <div class="items2">6</div>
+        <!-- <div class="items">7</div> -->
+        <!-- <div class="items">8</div> -->
+        <!-- <div class="items">9</div> -->
+    </div>
+</body>
+</html>

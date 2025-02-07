@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid | Grid Item Properties | Grid-area</title>
+    <!-- Menentukan nama area pada item sesuai dengan template yg sudah dibuat sblmnya melalui property grid-template-areas
+     Shorthand untuk grid-colum-start, grid-column-end, grid row start and grid row end
+    
+    .items{
+        grid-area: <name> | <row-start> |<column-start> | <row-end> | <column-end>
+    }
+    -->
+
+    <style>
+        html,body {
+            margin:0;
+            padding:0;
+        }
+
+        /* --- Container 1 --- */
+        .container {
+            width: 80%;
+            margin: 50px auto;
+            display: grid;
+
+            background-color: grey;
+            
+            grid-template-columns: minmax(200px, 300px) 1fr 1fr;
+            grid-template-rows: repeat(3, 100px);
+            grid-template-areas: 
+            'header header header'
+            'sidebar content content'
+            'footer footer footer'    
+            ;
+        }
+        .items {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .header {
+            grid-area: header;
+            background-color: salmon;
+        }
+        .content {
+            grid-area: sidebar;
+            background-color: lightgreen;
+        }
+        .footer {
+            grid-area: footer;
+            background-color: silver;
+        }
+
+        
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="items header">1</div>
+        <div class="items sidebar">2</div>
+        <div class="items content">3</div>
+        <div class="items footer">4</div>
+        <!-- <div class="items">5</div> -->
+        <!-- <div class="items">6</div> -->
+        <!-- <div class="items">7</div> -->
+        <!-- <div class="items">8</div> -->
+        <!-- <div class="items">9</div> -->
+    </div>
+
+    
+    </div>
+</body>
+</html>

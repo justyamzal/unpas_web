@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid | Grid Alignment | Align Items</title>
+    
+    
+    <style>
+        /* .container {
+            align-items : start |end | center | stretch;
+            } 
+        */
+
+        * {
+            margin: 0;
+            padding: 0;
+
+        }
+
+        /* Container 1 - align-start */
+        .container {
+            width: 80%;
+            margin: 50px auto;
+            background-color: #ddd;
+            display: grid;
+            grid-template-rows: 130px 130px 130px;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 5px;
+            align-items: start;
+            /* align-items:end */
+            /* align-items:center */
+            /* align-items:stretch */
+        }
+
+        .items {
+            border: 3px solid black;
+            width: 150px;
+            background-color: lightblue;
+        }
+        /* column 1 */
+        .items.i1,
+        .items.i4,
+        .items.i7 {
+            height: 100px;
+        }
+        /* column 2 */
+        .items.i2,
+        .items.i5,
+        .items.i8 {
+            height: 50px;
+        }
+        /* column 3 */
+        .items.i1,
+        .items.i4,
+        .items.i7 {
+            height: 50px;
+        }
+
+        /* Container 2 - align-end */
+        .container-two {
+            width: 80%;
+            margin: 50px auto;
+            background-color: #ddd;
+            display: grid;
+            grid-template-rows: 130px 130px 130px;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 5px;
+            /* align-items: start; */
+            align-items:end
+            /* align-items:center */
+            /* alignitems:stretch */
+        }
+
+        .items2 {
+            border: 3px solid black;
+            width: 150px;
+            background-color: lightblue;
+        }
+        /* column 1 */
+        .items2.i11,
+        .items2.i14,
+        .items2.i17 {
+            height: 100px;
+        }
+        /* column 2 */
+        .items2.i12,
+        .items2.i15,
+        .items2.i18 {
+            height: 50px;
+        }
+        /* column 3 */
+        .items2.i13,
+        .items2.i16,
+        .items2.i19 {
+            height: 50px;
+        }
+
+        /* Container 3 - align-center */
+        .container-three {
+            width: 80%;
+            margin: 50px auto;
+            background-color: #ddd;
+            display: grid;
+            grid-template-rows: 130px 130px 130px;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 5px;
+            /* align-items: start; */
+            /* align items:end */
+            align-items:center
+            /* align items:stretch */
+        }
+
+        .items3 {
+            border: 3px solid black;
+            width: 150px;
+            background-color: lightblue;
+        }
+        /* column 1 */
+        .items3.i21,
+        .items3.i24,
+        .items3.i27 {
+            height: 100px;
+        }
+        /* column 2 */
+        .items3.i22,
+        .items3.i25,
+        .items3.i28 {
+            height: 50px;
+        }
+        /* column 3 */
+        .items3.i23,
+        .items3.i26,
+        .items3.i29 {
+            height: 50px;
+        }
+        
+
+        /* Container 4 - align-stretch */
+        .container-four {
+            width: 80%;
+            margin: 50px auto;
+            background-color: #ddd;
+            display: grid;
+            grid-template-rows: 130px 130px 130px;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 5px;
+            /* align-items: start; */
+            /* align items:end */
+            /* align-items:center */
+            align-items:stretch;
+        }
+
+        .items4 {
+            border: 3px solid black;
+            width: 150px;
+            background-color: lightblue;
+        }
+        /* column 1 */
+        .items4.i31,
+        .items4.i34,
+        .items4.i37 {
+            /* height: 100px; */
+        }
+        /* column 2 */
+        .items4.i32,
+        .items4.i35,
+        .items4.i38 {
+            /* height: 50px; */
+        }
+        /* column 3 */
+        .items4.i33,
+        .items4.i36,
+        .items4.i39 {
+            /* height: 50px; */
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+    <b>NB: Mensejajarkan grid-items pada sumbu vertikal</b>
+    <h1>Align-Items : Start </h1>
+    <div class="container">
+        <div class="items i1">1</div>
+        <div class="items i2">2</div>
+        <div class="items i3">3</div>
+        <div class="items i4">4</div>
+        <div class="items i5">5</div>
+        <div class="items i6">6</div>
+        <div class="items i7">7</div>
+        <div class="items i8">8</div>
+        <div class="items i9">9</div>
+    </div>
+
+    <h1>Align-Items : end </h1>
+    <div class="container-two">
+        <div class="items2 i11">11</div>
+        <div class="items2 i12">12</div>
+        <div class="items2 i13">13</div>
+        <div class="items2 i14">14</div>
+        <div class="items2 i15">15</div>
+        <div class="items2 i16">16</div>
+        <div class="items2 i17">17</div>
+        <div class="items2 i18">18</div>
+        <div class="items2 i19">19</div>
+    </div>
+
+    <h1>Align-Items : Center </h1>
+    <div class="container-three">
+        <div class="items3 i21">21</div>
+        <div class="items3 i22">22</div>
+        <div class="items3 i23">23</div>
+        <div class="items3 i24">24</div>
+        <div class="items3 i25">25</div>
+        <div class="items3 i26">26</div>
+        <div class="items3 i27">27</div>
+        <div class="items3 i28">28</div>
+        <div class="items3 i29">29</div>
+    </div>
+
+    <h1>Align-Items : Stretch </h1>
+    <div class="container-four">
+        <div class="items4 i31">31</div>
+        <div class="items4 i32">32</div>
+        <div class="items4 i33">33</div>
+        <div class="items4 i34">34</div>
+        <div class="items4 i35">35</div>
+        <div class="items4 i36">36</div>
+        <div class="items4 i37">37</div>
+        <div class="items4 i38">38</div>
+        <div class="items4 i39">39</div>
+    </div>
+</body>
+</html>

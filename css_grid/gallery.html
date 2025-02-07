@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Gallery</title>
+    
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-color: #ddd;
+            text-align: center;
+            /* margin: 20px auto; */
+
+        }
+        img {
+            display: block;
+            width: 100%;
+        }
+
+        .gallery {
+            width: 80%;
+            margin: 20px auto;
+            border: 10px solid white;
+            list-style: none;
+            box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+            display: grid;
+            grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+            /*! auto-fit: mengisi tempat yang kosong,
+            minmax : minimax imagesnya 150px tetapi jika view zoom kenakan size 1fr
+            
+            */
+
+            /*  */
+            grid-gap:5px
+        }
+    </style>
+</head>
+<body>
+    <h1>My Gallery</h1>
+    <ul class="gallery">
+        <img src="image/1.olimpia-campean-zkLOBGkthJo-unsplash.jpg" alt="" >
+        <img src="image/2.wesley-armstrong-ehismz8-NG8-unsplash.jpg" alt="" >
+        <img src="image/3.erik-mclean-A6Oul2V4DRY-unsplash.jpg" alt="" >
+        <img src="image/4.lasse-jensen-zOlroafBElA-unsplash.jpg" alt="" >
+        <img src="image/5.samsung-memory-DNXjLfVy2Hc-unsplash.jpg" alt="" >
+        <img src="image/6.samsung-memory-pz67hBsfbJ4-unsplash.jpg" alt="">
+        <img src="image/7.kurt-wang-J9Z67z9C3PQ-unsplash.jpg" alt="">
+        <img src="image/9.roger-starnes-sr-6X1uL4rx8fA-unsplash.jpg" alt="">
+        <img src="image/10.yuriy-yosipiv-AwXMGvHR434-unsplash.jpg" alt="">
+        
+        
+
+    </ul>
+</body>
+</html>
